@@ -1,17 +1,14 @@
-import Link from "next/link";
-
 export default function HomePage() {
   return (
-    <div className="space-y-16 md:space-y-20">
-      {/* HERO – PDF başlığı + butonlar */}
-      <section className="space-y-10">
-        {/* Üst başlık metinleri */}
-        <div className="space-y-6">
-          <p className="text-[10px] font-semibold tracking-[0.25em] text-slate-500 uppercase">
+    <main className="min-h-screen bg-[#dfeaff]">
+      <div className="mx-auto flex max-w-5xl flex-col gap-16 px-4 py-12 md:py-16">
+        {/* HERO – CNCİTEM + uzun açıklama + butonlar */}
+        <section className="space-y-8">
+          <p className="text-[11px] font-semibold tracking-[0.25em] text-slate-600 uppercase">
             CNCİTEM
           </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-snug">
+          <h1 className="text-2xl md:text-3xl font-bold leading-relaxed text-slate-900">
             takım tutuculardan kesici takımlara, bağlama
             <br className="hidden md:block" />
             elemanlarından yedek parçalara kadar ihtiyacın olan
@@ -21,148 +18,174 @@ export default function HomePage() {
             fiyat iste, üretimini hızlandır.
           </h1>
 
-          <p className="inline-flex flex-wrap items-center gap-2 text-sm md:text-base font-semibold text-slate-900">
+          <div className="inline-flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-900">
             <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-600 ring-1 ring-sky-200">
               cncitem.com
             </span>
             <span>ile saniyeler içinde</span>
-          </p>
+          </div>
 
           <div className="flex flex-wrap gap-3 pt-1">
             <button className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800">
               Giriş Yap
             </button>
-            <Link
-              href="#neler-yapabilirsiniz"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-800 hover:border-sky-400 hover:text-sky-600"
-            >
+            <button className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-800 hover:border-sky-400 hover:text-sky-600">
               Cncitem.com’u keşfet
-            </Link>
+            </button>
           </div>
-        </div>
+        </section>
 
-        {/* PDF’teki CNCİTEM açıklama bloğu */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm">
-          <h2 className="mb-2 text-sm font-semibold text-slate-900">CNCİTEM</h2>
-          <p className="text-xs text-slate-600 leading-relaxed">
-            Use this space to talk about your company&apos;s platform. What makes
-            CNCİTEM relevant and effective for CNC operatörleri, atölyeler ve
-            tedarikçiler? Buraya, ileride gerçek açıklama metnini
-            ekleyebilirsin.
-          </p>
-        </div>
-      </section>
+        {/* BLOK 2 – Cncitem.com’da neler yapabilirsiniz + 3 açıklama */}
+        <section className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-start">
+          {/* Sol: büyük beyaz kart (başlık) */}
+          <div className="rounded-3xl bg-white px-8 py-10 shadow-sm">
+            <p className="text-[13px] font-semibold tracking-[0.22em] uppercase text-slate-500">
+              cncitem.com’da
+            </p>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold leading-tight text-slate-900">
+              neler
+              <br />
+              yapabilirsiniz?
+            </h2>
+          </div>
 
-      {/* NELER YAPABİLİRSİNİZ + 3 KART (PDF’teki grid) */}
-      <section id="neler-yapabilirsiniz" className="space-y-6">
-        <div className="space-y-1">
-          <p className="text-[10px] font-semibold tracking-[0.18em] text-slate-500 uppercase">
-            CNCİTEM.COM’DA
-          </p>
-          <h2 className="text-2xl font-bold text-slate-900">
-            neler yapabilirsiniz?
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {/* CNCİTEM PAZARYERİ TIKLA */}
-          <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-900">
-                CNCİTEM PAZARYERİ TIKLA
+          {/* Sağ: 3 renkli satır (Pazaryeri / Fasonyeri / Haberyeri) */}
+          <div className="space-y-6 text-sm text-slate-800">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-900">
+                CNCİTEM <span className="text-[#ff2b2b]">PAZARYERİ</span> TIKLA
               </p>
-              <p className="text-[11px] text-slate-600 leading-relaxed">
+              <p className="mt-2 text-[13px] leading-relaxed text-slate-700">
                 Use this space to talk about your company&apos;s leadership
                 program. What makes this program relevant and effective? Add
                 that here.
               </p>
             </div>
-            <button className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-slate-50 px-4 py-2 text-[11px] font-semibold text-slate-800 hover:border-sky-400 hover:text-sky-600">
-              CNCİTEM PAZARYERİ TIKLA
-            </button>
-          </div>
 
-          {/* CNCİTEM FASONYERİ TIKLA */}
-          <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-900">
-                CNCİTEM FASONYERİ TIKLA
+            <div>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-900">
+                CNCİTEM <span className="text-[#1fbf5b]">FASONYERİ</span> TIKLA
               </p>
-              <p className="text-[11px] text-slate-600 leading-relaxed">
+              <p className="mt-2 text-[13px] leading-relaxed text-slate-700">
                 Use this space to talk about your company&apos;s leadership
                 program. What makes this program relevant and effective? Add
                 that here.
               </p>
             </div>
-            <button className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-slate-50 px-4 py-2 text-[11px] font-semibold text-slate-800 hover:border-sky-400 hover:text-sky-600">
-              CNCİTEM FASONYERİ TIKLA
-            </button>
-          </div>
 
-          {/* CNCİTEM HABERYERİ TIKLA */}
-          <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="space-y-2">
-              <p className="text-xs font-semibold text-slate-900">
-                CNCİTEM HABERYERİ TIKLA
+            <div>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-900">
+                CNCİTEM <span className="text-[#1f6fff]">HABERYERİ</span> TIKLA
               </p>
-              <p className="text-[11px] text-slate-600 leading-relaxed">
+              <p className="mt-2 text-[13px] leading-relaxed text-slate-700">
                 Use this space to talk about your company&apos;s leadership
                 program. What makes this program relevant and effective? Add
                 that here.
               </p>
             </div>
-            <button className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-slate-50 px-4 py-2 text-[11px] font-semibold text-slate-800 hover:border-sky-400 hover:text-sky-600">
-              CNCİTEM HABERYERİ TIKLA
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ALT BLOK – Thanks for joining + E-Posta (PDF’in en altı) */}
-      <section className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-5 md:grid-cols-[3fr,2fr] md:p-7">
-        {/* Solda metin */}
-        <div className="space-y-3">
-          <h2 className="text-xl font-bold text-slate-900">
-            Thanks for joining this training!
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Please answer this short survey so we can improve our program to
-            support you better.
-          </p>
-        </div>
-
-        {/* Sağda e-posta formu */}
-        <div className="space-y-4 rounded-2xl bg-slate-50 p-4 border border-slate-200">
-          <div className="space-y-1">
-            <label
-              htmlFor="email"
-              className="text-xs font-semibold text-slate-700"
-            >
-              E-Posta Adresiniz
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="ornek@cncitem.com"
-              className="w-full rounded-full border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-            />
+        {/* BLOK 3 – Thanks for joining this training! + “kadın” kartı (placeholder) */}
+        <section className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-center">
+          {/* Sol: başlık + paragraf */}
+          <div className="space-y-4">
+            <h3 className="text-3xl md:text-4xl font-bold leading-tight text-slate-900">
+              Thanks for
+              <br />
+              joining this
+              <br />
+              training!
+            </h3>
+            <p className="max-w-md text-sm leading-relaxed text-slate-800">
+              Please answer this short survey so we can improve our program to
+              support you better.
+            </p>
+            <div className="pt-4 text-2xl text-slate-900">↓</div>
           </div>
 
-          <div className="space-y-1">
-            <p className="text-sm font-semibold text-slate-900 leading-snug">
+          {/* Sağ: stilize “kadın” kartı – resimsiz, sorun çıkarmayan */}
+          <div className="flex justify-center">
+            <div className="flex h-[360px] w-[260px] flex-col justify-between rounded-3xl border-2 border-slate-900 bg-white p-5 shadow-sm">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-lg text-slate-50">
+                    🙂
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-900">
+                      Eğitim Katılımcısı
+                    </p>
+                    <p className="text-[11px] text-slate-500">
+                      (Kadın görsel alanı)
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-2 h-32 rounded-2xl bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300" />
+              </div>
+              <p className="text-[11px] text-slate-600">
+                Buraya istersen ileride gerçek fotoğraf koyarsın. Şimdilik
+                Canva tasarımındaki kadın bloğunun yerini tutuyor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* BLOK 4 – Erkek kartı + bülten */}
+        <section className="grid gap-10 md:grid-cols-[2fr,3fr] md:items-center">
+          {/* Sol: stilize “erkek” kartı */}
+          <div className="flex justify-center">
+            <div className="flex h-[360px] w-[260px] flex-col justify-between rounded-3xl border-2 border-slate-900 bg-white p-5 shadow-sm">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-lg text-slate-50">
+                    🧑
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-900">
+                      Atölye Sahibi
+                    </p>
+                    <p className="text-[11px] text-slate-500">
+                      (Erkek görsel alanı)
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-2 h-32 rounded-2xl bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300" />
+              </div>
+              <p className="text-[11px] text-slate-600">
+                Bu alan da Canva tasarımındaki erkek kartını temsil ediyor. İleride
+                gerçek fotoğraf ekleyebilirsin.
+              </p>
+            </div>
+          </div>
+
+          {/* Sağ: bülten başlığı + input */}
+          <div className="space-y-6">
+            <h4 className="text-2xl md:text-3xl font-bold leading-snug text-slate-900">
               Fırsat ve yeniliklerden
               <br />
               haberdar olmak için
               <br />
               bültenimize abone olun!
-            </p>
-          </div>
+            </h4>
 
-          <button className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800">
-            Bültene Abone Ol
-          </button>
-        </div>
-      </section>
-    </div>
+            <div className="max-w-sm space-y-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-slate-900"
+              >
+                E-Posta Adresiniz
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="ornek@cncitem.com"
+                className="w-full rounded-full border-2 border-slate-900 bg-white px-4 py-2 text-sm outline-none placeholder:text-slate-500 focus:border-slate-900 focus:ring-0"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
