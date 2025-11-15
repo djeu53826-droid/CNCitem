@@ -127,6 +127,90 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+{/* WOMAN BLOĞU – training başlığının devamı */}
+<section className="grid md:grid-cols-2 gap-10 items-center py-16">
+  {/* Sol: başlık + açıklama + ok */}
+  <div className="space-y-4">
+    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+      Thanks for joining this training!
+    </h3>
+    <p className="text-sm text-slate-700 leading-relaxed max-w-md">
+      Please answer this short survey so we can improve our program to support you better.
+    </p>
+    <div className="text-3xl text-slate-900">↓</div>
+  </div>
+
+  {/* Sağ: kadın kartı (resimsiz) */}
+  <div className="flex justify-center">
+    <div className="h-[360px] w-[260px] rounded-3xl border-2 border-slate-900 bg-white p-5 shadow-sm flex flex-col justify-between">
+      <div className="space-y-3">
+        <div className="flex items-center gap-3">
+          <div className="h-12 w-12 rounded-full bg-slate-900 text-white flex items-center justify-center text-lg">
+            🙂
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-slate-900">
+              Eğitim Katılımcısı
+            </p>
+            <p className="text-[11px] text-slate-500">(kadın görsel alanı)</p>
+          </div>
+        </div>
+        <div className="mt-2 h-32 rounded-2xl bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300" />
+      </div>
+      <p className="text-[11px] text-slate-600">
+        Buraya istersen sonra gerçek fotoğraf koyarsın. Şimdilik Canva’daki kadın kartının yerini tutuyor.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* MAN + BÜLTEN BLOĞU */}
+<section className="grid md:grid-cols-2 gap-10 items-center py-16">
+  {/* Sol: erkek kartı (resimsiz) */}
+  <div className="flex justify-center">
+    <div className="h-[360px] w-[260px] rounded-3xl border-2 border-slate-900 bg-white p-5 shadow-sm flex flex-col justify-between">
+      <div className="space-y-3">
+        <div className="flex items-center gap-3">
+          <div className="h-12 w-12 rounded-full bg-slate-900 text-white flex items-center justify-center text-lg">
+            🧑
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-slate-900">
+              Atölye Sahibi
+            </p>
+            <p className="text-[11px] text-slate-500">(erkek görsel alanı)</p>
+          </div>
+        </div>
+        <div className="mt-2 h-32 rounded-2xl bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300" />
+      </div>
+      <p className="text-[11px] text-slate-600">
+        Bu alan da Canva’daki erkek kartını temsil ediyor. İleride gerçek fotoğrafla değiştirebilirsin.
+      </p>
+    </div>
+  </div>
+
+  {/* Sağ: bülten başlığı + mail input */}
+  <div className="space-y-4">
+    <h4 className="text-2xl md:text-3xl font-bold leading-snug text-slate-900">
+      Fırsat ve yeniliklerden
+      <br />
+      haberdar olmak için
+      <br />
+      bültenimize abone olun!
+    </h4>
+
+    <div className="space-y-2 max-w-sm">
+      <label className="text-sm font-medium text-slate-900">
+        E-Posta Adresiniz
+      </label>
+      <input
+        type="email"
+        placeholder="ornek@cncitem.com"
+        className="w-full rounded-full border-2 border-slate-900 bg-white px-4 py-2 text-sm placeholder:text-slate-500 outline-none"
+      />
+    </div>
+  </div>
+</section>
 
         {/* MAN + MAIL FORM */}
         <section className="grid md:grid-cols-2 gap-10 items-center">
