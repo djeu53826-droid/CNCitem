@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc; /* açık gri-beyaz */
+  color: #0f172a; /* slate-900 */
+}
+
+/* İstersen aşağıya scroll bar vs. ekleyebilirsin */
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8fafc; /* açık gri-beyaz */
+  color: #0f172a; /* slate-900 */
+}
+
+/* Smooth font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar (opsiyonel) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* slate-100 */
+}
